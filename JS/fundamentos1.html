@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<title>Fundamentos de Programación en JavaScript parte 1</title>
+	<meta name="description" content="En este ejercicio entenderemos fundamentos de programación en JavaScript" />
+	<style>
+		body, html { font-family: Helvetica, sans-serif; font-size: 16px; }
+	</style>
+</head>
+<body>
+	<h1>Fundamentos de Programación en JavaScript parte 1</h1>
+	<p>
+		<a href="index.html">Regresar al inicio</a>
+	</p>
+	<h2>Definiendo un Perro</h2>
+	<script>
+		//comentario de una linea
+		/*
+		Comentarios 
+		en
+		varias
+		lineas
+		de
+		código
+		*/
+		function Perro(n,r,e,s,a,f,c)
+		{
+			//this dentro de una función es el objeto que se define en la función
+			var o = this;
+			var imagen = document.createElement("img");
+
+			o.nombre = n;
+			o.raza = r;
+			o.edad = e;
+			//o.sexo = s;
+			o.adiestrado = a;
+			o.foto = f
+
+			//Asignación (1 igual = )
+			//Comparación ( 2 iguales == )
+			//Idéntico (3 iguales === mismo tipo de dato)	
+			//operador ternario
+			//variable  = (condicion)?verdadero:falso
+			o.sexo = (s==true)?"Macho":"Hembra";
+			console.log(typeof s, typeof n, typeof e);
+
+			o.aparecer = function()
+			{
+				//alert("Aparécete!!!");
+				imagen.src = o.foto;
+				imagen.alt = o.nombre;
+				document.body.appendChild(imagen);
+			}
+
+			o.ladrar = function()
+			{
+				//alert("Guauu!!! Guauu!!!");
+				var audio = document.createElement("audio");
+				audio.src="activos/guau.mp3";
+				//audio.controls = true;
+				//document.body.appendChild(audio);
+				return audio.play();
+			}
+
+			o.comer = function(c)
+			{
+				o.comida = c;
+				return alert(o.nombre+" comió "+o.comida);
+			}
+
+			o.mover = function()
+			{
+				imagen.style.borderRadius = "100%";
+				imagen.style.position = "relative";
+				imagen.style.left = "10em";
+			}
+		}
+
+		function iniciar()
+		{
+			//alert("Ejecutando función iniciar");
+			var kenai = new Perro("kEnAi","FireFox",2,true,true,"activos/kenai.jpg","croqueta");
+			//alert(kenai);
+			//alert(window+"-"+document+"-"+navigator);
+			document.write("<h3>Aprendiendo JavaScript</h3>");
+			document.write(kenai);
+			document.write(window+"-"+document+"-"+navigator);
+			console.log(kenai,window,document,navigator);
+			document.write("<p>"+kenai.nombre+"</p>");
+			document.write("<p>"+kenai.raza+"</p>");
+			document.write("<p>"+kenai.edad+"</p>");
+			document.write("<p>"+kenai.sexo+"</p>");
+			document.write("<p>"+kenai.adiestrado+"</p>");
+			kenai.aparecer();
+			kenai.ladrar();
+			kenai.comer("croqueta");
+			kenai.mover();
+		}
+
+		iniciar();
+	</script>
+</body>
+</html>

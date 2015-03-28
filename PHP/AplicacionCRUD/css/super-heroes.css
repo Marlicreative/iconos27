@@ -1,0 +1,62 @@
+body, html
+{
+	background: #EEE;
+	font-family: Helvetica, Arial;
+	font-size: 16px;
+	text-align: center;
+}
+
+body { font-size: 0; }
+
+img { max-width: 100%; }
+
+#cabecera, #contenido 
+{ 
+	display: inline-block;
+	font-size: 1rem;
+	vertical-align: top; 
+	width: 20%;
+}
+
+#contenido { background: white; width: 80%; }
+
+#precarga, #respuesta { display: none; }
+
+.error, .exito
+{ 
+	background: red;
+	color: white;
+	padding: 1em;
+}
+
+.exito { background: green; }
+
+.paginacion a, .actual
+{
+	color: #EC673A;
+	font-weight: bold;
+	font-size: 1.5rem;
+	padding: 0 .5rem;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.paginacion a:hover, .actual { color:#1C5F81; }
+
+.actual { font-size: 3rem;  }
+
+.tabla { margin: auto; width: 90%; }
+
+.tabla a { color: #EEE; }
+
+.tabla a:hover { color: #292623; }
+
+.tabla img { max-width: 200px; }
+
+.tabla td { vertical-align: top; }
+
+.tabla th { background: #292623; color: #EEE; }
+
+.tabla tr:nth-child(odd) { background: #EC673A; }
+
+.tabla tr:nth-child(even) { background: #1C5F81; }

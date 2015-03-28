@@ -1,0 +1,13 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteBase /aAlumnos/iconos27/PHP/SitioAmigable/v4-optimizar-spa-url-amigables/
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?p=$1 [L]
+
+RewriteRule ^acerca acerca/
+RewriteRule ^servicios servicios/
+RewriteRule ^contacto contacto/
