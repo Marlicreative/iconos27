@@ -53,3 +53,28 @@ hr { border-color: #292623; margin: 1em auto; }
 	font-size: 3em;
    	font-weight: bold;
 }
+
+.contenedor
+{
+	background: #CCC;
+	font-size: 0;
+	margin: auto;
+	padding: 1rem;
+	width: 90%;
+}
+
+.hijos
+{ 
+	background: #EEE;
+	border: thick solid #444;
+	box-sizing:border-box;
+	font-size: 1rem;
+	padding: 1rem;
+}
+
+.dos-columnas
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+}

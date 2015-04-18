@@ -107,13 +107,180 @@ function efectos()
 			},5000);
 	});	
 
+	$("#boton12").on("click",function(){
+		//$("#oculto").hide(2000);
+		//alert("El párrafo se ha ocultado");
+
+		//callback
+		$("#oculto").hide(2000,function(){
+			alert("El párrafo se ha ocultado");
+		});
+	});
+
+		/*
+	antes .before()
+	<selector>
+		antes .prepend()
+		CONTENIDO .html()
+		después .append()
+	</selector>
+	después .after()
+	*/
+
+	$("#boton13").on("click",function(){
+		$("p").html("<i>El contenido ha sido cambiado</i><input type='text'/>");
+	});
+
+	$("#boton14").on("click",function(){
+		$("p").prepend("<b>contenido agregado antes</b> <img src='http://cursos.bextlan.com/img/jquery.png' /> ");
+	});
+	
+	$("#boton15").on("click",function(){
+		$("p").append(" <b>contenido agregado después</b> <img src='http://cursos.bextlan.com/img/jquery.png' /> <iframe width='560' height='315' src='https://www.youtube.com/embed/AoZYaUXmGB8' frameborder='0' allowfullscreen></iframe>");
+	});
+	
+	$("#boton16").on("click",function(){
+		$("p").before("<div class='antes'><i>contenido agregado antes del selector</i></div>");
+		$(".antes").css("background","magenta");
+	});
+	
+	$("#boton17").on("click",function(){
+		$("p").after("<div class='despues'><i>contenido agregado después del selector</i></div>");
+		$(".despues").css("background","cyan");
+	});
+	
+	$("#boton18").on("click",function(){
+		$("p").css("font-size","2em");
+		$("p").css({backgroundColor:"skyblue"});
+	});
+	
+	$("#boton19").on("click",function(){
+		$("p").css({
+			"background-color":"#EEE",
+			border:"thick solid #EC673A",
+			borderRadius:"1em",
+			fontSize:"2em",
+			padding:"1em",
+			"text-shadow":"5px 5px 10px #000"
+		});
+	});
+
+	/*
+	$("#enlace").on("click",function(){});
+	$("#enlace").on("mouseover",function(){});
+	$("#enlace").on("mouseout",function(){});
+	*/
+
+	$("#enlace").on({
+		click:function(evento){
+			evento.preventDefault();
+			alert("Se ha prevenido el enlace");
+		},
+		mouseover:function(){
+			$("span").addClass("span-css");
+		},
+		mouseout:function(){
+			$("span").removeClass("span-css")
+		}
+	});
+
+	$("#boton20").on("click",function(){
+		//$("#ajax").load("otro.html");
+		$("#ajax").load("otro.html #logo");
+	});
+
+	$("#boton21").on("click",function(){
+		$("#ajax").load("otro.html",function(){
+			$(this)
+				.css({display:"none"})
+				.fadeIn(2000);
+		});
+	});
+
+	$("#que-tecla").on("keyup",function(evento){
+		$("#codigo-tecla").text(evento.keyCode);
+	});
+
+	$("#subir").on("click",function(){
+		$("body,html").animate({
+			scrollTop:0,
+			scrollLeft:0
+		},0);
+	});
+}
+
+function muevete(evento)
+{
+	//alert(evento.keyCode);
+	switch(evento.keyCode)
+	{
+		case 37:
+			evento.preventDefault();
+			$("#pacman").animate({left:"-=2em"},"swing");
+			break;
+		case 38:
+			evento.preventDefault();
+			$("#pacman").animate({top:"-=2em"},"swing");
+			break;
+		case 39:
+			evento.preventDefault();
+			$("#pacman").animate({left:"+=2em"},"swing");
+			break;
+		case 40:
+			evento.preventDefault();
+			$("#pacman").animate({top:"+=2em"},"swing");
+			break;		
+	}
+}
+
+function detectarScroll()
+{
+	var scrollVertical = $(window).scrollTop();
+	var scrollHorizontal = $(window).scrollLeft();
+
+	console.log(scrollVertical,scrollHorizontal);
+
+	/*
+	if(scrollVertical>100)
+	{
+		$("#subir").fadeIn();
+	}
+	else
+	{
+		$("#subir").fadeOut();
+	}
+	*/
+
+	return (scrollVertical>100)?$("#subir").fadeIn():$("#subir").fadeOut();
+}
+
+function responsiveDesign()
+{
+	var anchoPantalla = $(window).width();
+	var altoPantalla = $(window).height();
+	console.log(anchoPantalla,altoPantalla);
+
+	var limite = (anchoPantalla<800)?true:false;
+	
+	if(limite)
+	{
+		//una columna
+		$(".hijos").removeClass("dos-columnas");
+	}
+	else
+	{
+		//dos columnas
+		$(".hijos").addClass("dos-columnas");
+	}
 }
 
 //manejador de eventos múltiples
 //$(objeto).on("evento",función);
+$(document).on("keydown",muevete);
 $(document).on("ready",efectos);
 //$(window).on("load",efectos);
-
+$(window).on("scroll",detectarScroll);
+$(window).on("resize load",responsiveDesign)
 /*
 //semantica
 $(window).load(efectos);
@@ -132,4 +299,5 @@ window.addEventListener("load",alCargarDocumento);
 
 window.onload = function(){
 
-}*/
+}
+*/
