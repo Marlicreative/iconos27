@@ -1,0 +1,56 @@
+<!-- http://pastebin.com/dCRrKeRh -->
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<title>Componente jQuery</title>
+	<meta name="description" content="En este ejercicio aprenderemos a crear componentes (plug-ins) con jQuery." />
+	<link rel="stylesheet" href="css/jquery.plugin.css" />
+</head>
+<body>
+	<header>
+		<h1>
+			Componentes en
+			<br />
+			<img src="http://cursos.bextlan.com/img/jquery.png" />
+		</h1>
+	</header>
+	<section id="contenido">
+		<p>
+			Los plugins son una utilidad que pone jQuery a disposición de los programadores para ampliar las funcionalidades de la librería. Sirven para hacer cosas más complejas y para resolver necesidades específicas, de tal manera que puedan utilizarse en cualquier proyecto.
+		</p>
+		<p>
+			En la práctica un plugin no es más que una función que se añade al objeto jQuery, para que a partir de ese momento responda a nuevas funcionalidades.
+		</p>
+		<button id="defecto">Activar plugin por defecto</button>
+		<button id="usuario">Activar plugin por usuario</button>
+	</section>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.plugin.js"></script>
+	<script>
+		$(document).on("ready",function(){
+			//$("body").plugin();
+			//$("button").plugin();
+			/*
+			$("button").plugin({
+				fondo:"greenyellow",
+				letra:"4rem",
+				colorLetra:"red"
+			});
+			*/
+
+			$("#defecto").on("click",function(){
+				$("#contenido").plugin();
+			});
+
+			$("#usuario").on("click",function(){
+				$("#contenido").plugin({
+					fondo:"#1C5F81",
+					colorLetra:"#EC673A",
+					letra:".5em"
+				});
+			});
+		});
+	</script>
+</body>
+</html>
