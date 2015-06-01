@@ -16,3 +16,7 @@
 	Para ver wp como admin:
 		localhost/ruta-del-sitio/wp-login.php
 		localhost/ruta-del-sitio/wp-admin
+
+
+Enlaces personalizados
+	/%category%/%postname%/

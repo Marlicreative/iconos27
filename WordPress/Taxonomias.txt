@@ -1,7 +1,7 @@
 Taxonomía de WordPress
 
 Categorías (Clasifican el contenido)
-Etiquetas (Palabras clave, búsquedas internas)
+Etiquetas (Palabras clave, para búsquedas internas)
 Entradas (Publicaciones, contenido final)
 Páginas	(Contenido estático)
 
