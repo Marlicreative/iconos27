@@ -1,0 +1,140 @@
+HTML5
+	Estructura-Contenido 
+		HTML: Lenguaje de marcado basado en etiquetas y atributos, nos define estructura y contenido
+			Planear bien nuestra estructura de HTML (uso de etiquetas)
+			Trabajar la semántica
+			La semántica de nuestras etiquetas la define el contenido y su distribución
+			El contenido es el Rey
+			Los motores de búsqueda son ciegos, si tu contenido esta bien estructurado, tu contenido será bien posicionado
+	Presentación
+		CSS: Lenguaje de reglas basado en atributo:valor que nos provee presentación (diseño) a las estructuras HTML
+			Selectores
+				http://librosweb.es/libro/css_avanzado/
+				Etiquetas
+				Id's
+				Clases
+				Universal
+				de Hijos
+				Adyacentes
+				de Atributos
+				Pseudo-clases
+					:active
+					:checked
+					:default
+					:dir()
+					:disabled
+					:empty
+					:first
+					:first-child
+					:first-of-type
+					:fullscreen
+					:focus
+					:hover
+					:indeterminate
+					:in-range
+					:invalid
+					:lang()
+					:last-child
+					:last-of-type
+					:left
+					:link
+					:not()
+					:nth-child()
+					:nth-last-child()
+					:nth-of-type()
+					:only-child
+					:only-of-type
+					:optional
+					:out-of-range
+					:read-only
+					:read-write
+					:required
+					:right
+					:root
+					:scope
+					:target
+					:valid
+					:visited
+				Pseudo-elementos
+					.selector::after {…}
+					.selector::before {…}
+					.selector::first-letter {…}
+					.selector::first-line {…}
+					.selector::selection {…}
+				CSS3
+			Unidades de Medida
+				Absolutas
+					px, pt, cm, in
+				Relativas
+					%, em, rem, ex, vw, vh, vmax, vmin
+			Patrones
+				OOCSS 
+					CSS Orientado a Objetos
+					http://oocss.org/
+
+				BEM
+					Bloque-Elemento-Modificador
+					https://en.bem.info/
+					https://github.com/Wakkos/CSS-Guidelines
+
+					ejemplo
+					.bloque {}
+					.bloque__elemento {}
+					.bloque--modificador {}
+
+					.menu {}
+					.menu__item {}
+					.menu__item--hover{}
+
+				CCSS
+					Componentes CSS
+					http://sathify.github.io/CCSS/
+					
+					ejemplo
+						u-className Global base/utility classes
+						img-className Global image classes
+						animate-className Global animation classes
+					
+						ComponentName Standard Components (B)
+						ComponentName-elementName Component's Element (E)
+						ComponentName--modifierName Component's Modifier (M)
+
+				Atomic Design
+					http://bradfrost.com/blog/post/atomic-web-design/
+					http://smm.zoomquiet.io/data/20110511083224/index.html
+					http://patternlab.io/
+					http://demo.patternlab.io/
+					Diseño Atómico
+						Átomos - Etiquets HTML
+						Moleculas - Clases CSS
+						Organismos - Zonas de contenido (Cabecera, Pie, Menú, etc)
+						Plantillas - Wireframes (Técnica de Maquetación)
+						Páginas - Plantilla con contenido (Versión Final)
+			Recomendaciones
+				Normalizar los estilos iniciales de nuestras etiquetas HTML
+					reset.css
+					normalize.css
+					podemos definir los propios
+				Definir siempre un font-size a tu elemento root (html) y de preferencia hacerlo en px
+				Evitar definición de ID's en CSS
+				Ser cuidadoso con la definición de reglas a etiquetas HTML
+				Trabajar todo con clases
+				Aprovechar los selectores y unidades de medida de CSS
+				Maquetar bajo un enfoque Mobile First
+	Funcionalidad
+		Buenas prácticas de JS
+			http://browserdiet.com/es/
+		Soporte HTML5
+			Características que los navegadores aun no soportan
+			Soporte a navegadores viejos
+			http://modernizr.com/ ( planear, diseñar y desarrollar fallbacks )
+		Enfoque Responsive
+			Mobile First - Progressive Enhancement (Mejora Progresiva) Soporte a navegadores viejos
+			Desktop First - Graceful Degradation (Degradación Elegante)
+
+
+Técnicas de Maquetación
+	float vs display
+	display : inline-block
+			: table
+			: flex
