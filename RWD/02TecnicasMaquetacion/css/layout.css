@@ -1,0 +1,33 @@
+/* float left/right */
+.float-l { float: left; }
+
+.float-r { float: right; }
+
+.clear, .clear:after, .clear:before { clear: both; }
+
+.clear:after, .clear:before {
+	content: " ";
+	display: block;
+}
+
+
+/* display inline-block */
+.inline-block { display: inline-block; }
+
+.vertical-top { vertical-align: top; }
+
+.vertical-middle { vertical-align: middle; }
+
+.font-0 { font-size: 0; }
+
+
+/* display table */
+.table { display: table; }
+
+.table-cell { display: table-cell; }
+
+
+/* display flex */
+.flex { display: flex; }
+
+.flex-item { flex: none; }

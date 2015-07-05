@@ -1,0 +1,32 @@
+h1 { margin: 1rem auto; }
+
+.container{ padding: 1rem; }
+
+.item {
+	height: 100px;
+	padding: 1rem;
+	font-size: 2rem;
+	border: thin solid #FF5700;
+}
+
+.float-usos {
+	text-align: left;
+	background-color: #222; 
+}
+
+.float-usos p { font-size: 2rem; }
+
+.float-usos img { float: left; }
+
+table {
+	margin: auto;
+	background-color: #CCC;
+	border-collapse: collapse;
+}
+	
+td {
+	padding: 1rem;
+	font-size: 2rem;
+	background-color: #222;
+	border: thin solid #FF5700;
+}
