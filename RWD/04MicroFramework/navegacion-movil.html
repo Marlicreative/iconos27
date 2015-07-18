@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Navegación movil</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/nav-toggle.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Begin Pattern HTML-->
+    <div class="container-fluid">
+		<header class="container  f0  header">
+			<h1 class="item  ph12  md4  i-b  v-middle">Logo</h1>
+			<a href="#menu" class="menu-link"><i class="fa  fa-bars"></i></a>
+			<nav class="item  ph12  md8  i-b  v-middle  p0  md-p_5  md-right" id="menu" role="navigation">
+				<ul>
+					<li class="nobullet"><a class="item" href="#">Home</a></li>
+					<li class="nobullet"><a class="item" href="#">About</a></li>
+					<li class="nobullet"><a class="item" href="#">Products</a></li>
+					<li class="nobullet"><a class="item" href="#">Services</a></li>
+					<li class="nobullet"><a class="item" href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+    </div>
+	<!--End Pattern HTML-->	
+	<section class="container  f0  p1  after-fixed">
+		<article class="item  border  ph12">A</article>
+	</section>
+	<section class="container  f0  p1">
+		<article class="item  border  ph12  sm6  md4  lg3  i-b  v-top  center">B</article>
+		<article class="item  border  ph12  sm6  md4  lg3  i-b  v-top  center">C</article>
+		<article class="item  border  ph12  sm6  md4  lg3  i-b  v-top  center">D</article>
+	</section>
+	<section class="container  f0  p1">
+		<article class="item  border  ph12  sm6  md9  lg3  i-b  v-top  center">E</article>	
+		<article class="item  border  ph12  sm6  md3  lg3  i-b  v-top  center">F</article>
+	</section>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+	  		$('body').addClass('js');
+	  		var $menu = $('#menu'),
+	    		$menulink = $('.menu-link');
+	  
+			$menulink.click(function() {
+	  			$menulink.toggleClass('active');
+	  			$menu.toggleClass('active');
+	  			return false;
+			});
+		});
+	</script>
+</body>
+</html>

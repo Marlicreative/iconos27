@@ -1,0 +1,23 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+.after-fixed {
+	padding-top: 6rem;
+}
+
+.container-fluid, .item { background-color: #CCC; }
+
+@media screen and (min-width: 48em){
+	.header { 
+		position: static;
+		background-color: #CCC;
+	}
+
+	.after-fixed {
+		padding-top: 2rem;
+	}
+}
